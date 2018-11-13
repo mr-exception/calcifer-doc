@@ -26,6 +26,6 @@ nav:
   - External Libs:
     - Introduction: libs/index.md
     - Time: libs/time.md
-    - Kave Negar: libs/kave_negar.md
-    - Zarin Pal: libs/zarin_pal.md
+    - Kave Negar: libs/kavenegar.md
+    - Zarin Pal: libs/zarinpal.md
   - Terms Of Use: terms.md

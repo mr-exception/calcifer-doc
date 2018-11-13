@@ -1,0 +1,3 @@
+# Time.php
+
+this library is in `App\Drivers\Time.php`. Time library is an self versioned of the popular jdate library ((link)[https://jdf.scr.ir/]). jdate library is an open source project that has a sort of functions to work with timestamps to generate jalali date in different formats. if you take a look at jdate and compare it with Time.php, you can see that all function are the same. but for some requirements of calcifer engine. we entered a bit in source. but you can use the documetions of (jdate)[http://jdf.scr.ir]
