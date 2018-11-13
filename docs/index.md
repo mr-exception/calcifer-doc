@@ -1,17 +1,13 @@
-# Welcome to MkDocs
+# Calcifer
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+here is a complete guid about calcifer developments and how to use this project as an open source project. calcifer is an open source project under the MIT licence (2015). you can clone and use the latest version of project. it's free to use in any scale(personal, enterprise, researches and ...). now I have to count you the main chapters
 
-## Commands
+[our github repository](https://github.com/hapoly/hamelot)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+## Chapters
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* [get started](/start)
+* [database models](/db)
+* [APIs](/apis)
+* [external self developed libraries](/libs)
+* [terms of use](/terms)

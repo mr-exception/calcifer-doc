@@ -1,7 +1,8 @@
-site_name: My Docs
+site_name: Calcifer
 build:
   image: latest
-
+theme:
+  name: 'material'
 python:
   version: 3.6
   setup_py_install: true
@@ -11,3 +12,20 @@ formats: []
 formats:
     - epub
     - pdf
+
+
+nav:
+  - Home: index.md
+  - Get Started: start.md
+  - Database:
+    - Intorduction: db/index.md
+    - Tables: db/tables.md
+  - APIs:
+    - Intorduction: apis/index.md
+    - Rest APIs: apis/rest.md
+  - External Libs:
+    - Introduction: libs/index.md
+    - Time: libs/time.md
+    - Kave Negar: libs/kave_negar.md
+    - Zarin Pal: libs/zarin_pal.md
+  - Terms Of Use: terms.md
