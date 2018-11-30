@@ -17,12 +17,14 @@ formats:
 nav:
   - Home: index.md
   - Get Started: start.md
-  - Database:
-    - Intorduction: db/index.md
-    - Tables: db/tables.md
   - APIs:
     - Intorduction: apis/index.md
     - Rest APIs: apis/rest.md
+    - Resources: apis/resources.md
+    - Errors: apis/errors.md
+  - Database:
+    - Intorduction: db/index.md
+    - Tables: db/tables.md
   - External Libs:
     - Introduction: libs/index.md
     - Time: libs/time.md
