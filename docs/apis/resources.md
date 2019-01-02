@@ -101,13 +101,35 @@ an Orthopedic clinic is that kind of unit contains only orthopedic doctors/nurse
 
 use is a base object extended on group and permissions. here is a complete description of fields:
 
-| title      | type   | description          | example          |
-| ---------- | ------ | -------------------- | ---------------- |
-| first_name | string | first name of doctor | johan            |
-| last_name  | string | last name of doctor  | doe              |
-| email      | string | email string         | example@site.com |
-| phone      | string | phone number of user | 09112834736      |
-| slug       | string | user's unique slug   | johan123         |
+| title      | type    | description                     | example                |
+| ---------- | ------- | ------------------------------- | ---------------------- |
+| id         | uuid    | unique uuid of user             | 4727-499388473847-4947 |
+| first_name | string  | first name of doctor            | johan                  |
+| last_name  | string  | last name of doctor             | doe                    |
+| email      | string  | email string                    | example@site.com       |
+| phone      | string  | phone number of user            | 09112834736            |
+| slug       | string  | user's unique slug              | johan123               |
+| group_code | integer | [UserGroupCode](#usergroupcode) | 2                      |
+
+if user was a doctor the response object would have these fields too:
+
+| title       | type              | description                         | example                                                     |
+| ----------- | ----------------- | ----------------------------------- | ----------------------------------------------------------- |
+| msc         | string            | medical science code                | 485784                                                      |
+| fields      | [[Field](#field)] | doctor's fields                     | []                                                          |
+| start_year  | integer           | the starting medical year of doctor | 1390                                                        |
+| profile_url | http url          | doctor's profile url                | http://doctorsoal.com/users/489hcinccn4928cuocbxon23h98.png |
+| gender      | [Gender](#gender) | user's gender                       | 2                                                           |
+
+if user was a patient then response would have these fields too:
+
+| title       | type              | description                            | example                                                     |
+| ----------- | ----------------- | -------------------------------------- | ----------------------------------------------------------- |
+| gender      | [Gender](#gender) | user's gender                          | 2                                                           |
+| id_number   | string            | id number of user                      | 4738483748                                                  |
+| birth_date  | string            | user's birth date in format yyyy-mm-dd | 1373-04-22                                                  |
+| profile_url | http url          | doctor's profile url                   | http://doctorsoal.com/users/489hcinccn4928cuocbxon23h98.png |
+
 
 ## PhysiotherapyClinic
 

@@ -10,10 +10,10 @@ this api sends a new token to client's phone
 
 > middleware: -
 
-| title | type                 | description                   | example     |
-| ----- | -------------------- | ----------------------------- | ----------- |
-| phone | string, phone number | string in phone number format | 09214837485 |
-| group_code | [UserGroupCode](/api/resources#usergroupcode) | user group code | 
+| title      | type                                          | description                   | example     |
+| ---------- | --------------------------------------------- | ----------------------------- | ----------- |
+| phone      | string, phone number                          | string in phone number format | 09214837485 |
+| group_code | [UserGroupCode](/api/resources#usergroupcode) | user group code               |
 
 in case of success the result would be:
 
@@ -30,6 +30,7 @@ this api verifies the code sent to phone number
 > `POST` /api/auth/verify-token
 
 > middleware: -
+
 | title | type   | description      | example |
 | ----- | ------ | ---------------- | ------- |
 | token | string | string, 6 digits | 485748  |
@@ -62,11 +63,44 @@ in case of success if user was not registered before:
 
 > middleware: `auth`
 
+output would be [User](apis/resources/#user)
+
 #### Edit Profile
 
 > `POST` /api/auth/profile
 
 > middleware: `auth`
+
+this api edits the user information by user itself
+
+##### parameters
+
+| title      | type          | description              | example           |
+| ---------- | ------------- | ------------------------ | ----------------- |
+| first_name | string        | user's first name        | john              |
+| last_name  | string        | user's last name         | doe               |
+| email      | email(string) | users' email             | johndoe@gmail.com |
+| slug       | string        | unique slug for username | johnyyy           |
+
+
+if user was a doctor the response object would have these fields too:
+
+| title       | type              | description                         | example                                                     |
+| ----------- | ----------------- | ----------------------------------- | ----------------------------------------------------------- |
+| msc         | string            | medical science code                | 485784                                                      |
+| fields      | [[Field](#field)] | doctor's fields                     | []                                                          |
+| start_year  | integer           | the starting medical year of doctor | 1390                                                        |
+| profile_url | http url          | doctor's profile url                | http://doctorsoal.com/users/489hcinccn4928cuocbxon23h98.png |
+| gender      | [Gender](#gender) | user's gender                       | 2                                                           |
+
+if user was a patient then response would have these fields too:
+
+| title       | type              | description                            | example                                                     |
+| ----------- | ----------------- | -------------------------------------- | ----------------------------------------------------------- |
+| gender      | [Gender](#gender) | user's gender                          | 2                                                           |
+| id_number   | string            | id number of user                      | 4738483748                                                  |
+| birth_date  | string            | user's birth date in format yyyy-mm-dd | 1373-04-22                                                  |
+| profile_url | http url          | doctor's profile url                   | http://doctorsoal.com/users/489hcinccn4928cuocbxon23h98.png |
 
 #### Logout
 
